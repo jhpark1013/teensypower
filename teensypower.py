@@ -1,3 +1,4 @@
+import teensytoany
 class TeensyPower():
     def __init__(self):
         self._teensy = teensytoany.TeensyToAny()
