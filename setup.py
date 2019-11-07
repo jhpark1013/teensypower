@@ -7,7 +7,7 @@ setup(
     install_requires = requirements,
     name = "teensypower",
     packages=find_packages(include=['teensypower']),
-    version='0.0.0',
+    version='0.0.1',
     python_requires='>=3.6',
     zip_safe=False,
 )
