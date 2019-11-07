@@ -1,12 +1,13 @@
 import teensytoany
 class TeensyPower():
-    def __init__(self):
+    def __init__(self, pin_number=13):
         self._teensy = teensytoany.TeensyToAny()
-        self._teensy.gpio_pin_mode(13, 'OUTPUT')
+        self.pin_number = pin_number
+        self._teensy.gpio_pin_mode(self.pin_number, 'OUTPUT')
         self.poweroff()
 
     def poweron(self):
-        self._teensy.gpio_digital_write(13, 1)
+        self._teensy.gpio_digital_write(self.pin_number, 1)
 
     def poweroff(self):
-        self._teensy.gpio_digital_write(13, 0)
+        self._teensy.gpio_digital_write(self.pin_number, 0)
