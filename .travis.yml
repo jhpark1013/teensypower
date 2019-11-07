@@ -6,3 +6,12 @@ python:
 install:
 - pip install -U tox-travis
 script: tox
+deploy:
+  provider: pypi
+  user: __token__
+  on:
+    tags: true
+    python: 3.6
+    all_branches: true
+  password:
+    secure: as3uBECpW8VnKSQdCbbK/sSJoS3FNnUONIM3JjDwjzJh9B6slEisyghFcWSZNcdaN1eL4eDll+79AiGvhqUwgEcZd2vDd29aLu4DcXjT/GSbpRBHsLDPAi8CQ7073JXh3LXQ/s5GZ5uWOtI4MYCSUQEiLxg1WhJmIa25YWZzpM9BW2rRaFdoJBpJLwFrpQ+1ObJZVBl03K0YPWwj/J5FOv1+NuKiSopKIm8P49uHlQ+APb7UIgqxSeEr0VgJoN8cEhYaOlaFLS0wqdRxxJMq1mkfonBmaXOfuyBLlQuBOR35Anm9E3LnzdBbB8VKRXxrFiMH5ckCEODB3I9o1K6FDHBj61x74h7dszG45UrHJAOntzPzpEAqgeG3j+Y97HIdIbJDObJfzba4hsKZFjuYYkmXpUvc1gDsyIywGJx2J7XJ/z3C7EkpHN6w70Ofnl1s15VzA5T7diAVwGAd4vvHjTN9o9fgw/opZ/x4akwfGvInCXhnMMyQqgmbAUBTUVwZmCFqJqJK5b57hB7TMgc9/kkQQeifm9YJRgVBfb8qmPR4JhTZ7llBIVShlVLn1cjSEUX1iPx5Lq7uCPCJH8EVxh8Iww2m4nmmexABKGtPptGalU6ByCuO42eudNKhQlVoyg4OBdtfL+TjgvLtGZZZdsHCFZp+myqrecTyuR7gapk=
