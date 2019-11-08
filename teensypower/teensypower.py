@@ -1,4 +1,6 @@
 import teensytoany
+import serial
+
 class TeensyPower():
     def __init__(self, pin_number=13):
         self._teensy = teensytoany.TeensyToAny()
